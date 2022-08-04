@@ -207,6 +207,36 @@
     <footer>
         COPYRIGHT © 2021
     </footer>
+    
+
+    <div class="mobile-menu">
+        <ul>
+            <li>O serum</li>
+            <li>Opinie</li>
+            <li>Galeria</li>
+            <li>Kup teraz</li>
+            <li>FAQ</li>
+            <li id="close-mobile-menu">X</li>
+        </ul>
+    </div>
+    <script>
+        const menu_btn = document.querySelector('.menu')
+        const closeMobile = document.getElementById('close-mobile-menu')
+        const mobileMenu = document.querySelector('.mobile-menu')
+
+        menu_btn.addEventListener("click", () => {
+              if(mobileMenu.style.display == '' || mobileMenu.style.display == 'none'){
+        mobileMenu.style.display = 'block';
+   }
+   else {
+        mobileMenu.style.display = 'none';
+   }
+        })
+
+        closeMobile.addEventListener("click", () => {
+            mobileMenu.style.display = 'none';
+        })
+    </script>
 </body>
 
 </html>

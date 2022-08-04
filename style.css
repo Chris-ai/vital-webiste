@@ -15,7 +15,7 @@
     font-size: 16px;
     /* border: 1px solid limegreen; */
 
-     transition: .5s ease all;
+    transition: .5s ease all;
 }
 
 
@@ -208,7 +208,7 @@ button {
     justify-content: center;
 }
 
-.about > p {
+.about>p {
     font-size: 1.125rem;
     font-family: 'Open Sans', sans-serif;
     color: var(--font-color);
@@ -487,6 +487,51 @@ button {
     transition: .5s ease all;
 }
 
+
+
+.mobile-menu{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* place-items: center; */
+    background: RGBA(196, 196, 196, .8);
+      animation: slieFromTop 1s;
+  -webkit-animation: slieFromTop 1s;
+  -moz-animation: slieFromTop 1s;
+  -o-animation: slieFromTop 1s;
+  -ms-animation: slieFromTop 1s;
+
+}
+
+.mobile-menu > ul {
+    list-style: none;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu > ul > li {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: RGBA(0, 0, 0, .8);
+    margin: 1rem;
+    cursor: pointer;
+    /* border-bottom: 1px solid var(--border-gold); */
+}
+
 footer {
     background: var(--dark-brown);
     color: var(--white-font-color);
@@ -544,7 +589,7 @@ footer {
         font-size: .6rem;
     }
 
-      
+
 }
 
 
@@ -576,16 +621,18 @@ footer {
         font-size: 1rem;
         margin: 4rem 0;
     }
-    
-    #logo_big{
+
+    #logo_big {
         padding-bottom: .5rem;
         padding-top: .5rem;
     }
-    .vitamins{
+
+    .vitamins {
         font-size: .6rem;
         padding: .5rem .2rem;
     }
- .btn-buy-now-top{
+
+    .btn-buy-now-top {
         width: 100px;
         margin: .2rem 0;
         font-size: .6rem;
@@ -593,12 +640,10 @@ footer {
     }
 }
 
-@media(max-width: 640px){
-    
-}
+@media(max-width: 640px) {}
 
-@media(min-width: 600px){
-       .btn-buy-now-top{
+@media(min-width: 600px) {
+    .btn-buy-now-top {
         width: 200px;
         margin: .3rem 0;
         font-size: .9rem;
@@ -611,10 +656,11 @@ footer {
         font-size: 1rem;
     }
 
-    
-    .list-names{
+
+    .list-names {
         display: none;
     }
+
     .bless-btn {
         height: 30px;
         width: 180px;
@@ -648,15 +694,15 @@ footer {
     }
 }
 
-@media(max-width: 900px){
-    .list-names > p {
+@media(max-width: 900px) {
+    .list-names>p {
         padding: .1rem .3rem;
         font-size: .8rem;
     }
 }
 
-@media(max-width: 950px){  
-    .text-top{
+@media(max-width: 950px) {
+    .text-top {
         display: none;
     }
 }
@@ -678,46 +724,56 @@ footer {
         font-size: 1rem;
     }
 
-    #logo_big{
+    #logo_big {
         padding-top: .5rem;
         padding-bottom: .5rem;
     }
 
-    .vitamins{
+    .vitamins {
         font-size: .8rem;
         padding-top: .5rem;
         padding-bottom: .5rem;
     }
-        
-    .text-top{
+
+    .text-top {
         overflow-wrap: break-word;
         padding-left: 4rem;
         font-size: .8rem;
     }
 }
 
-@media(max-width: 1400px){
-    .text-top{
+@media(max-width: 1400px) {
+    .text-top {
         overflow-wrap: break-word;
         padding-left: 4rem;
         font-size: 1rem;
     }
 
-     .list-names > p {
+    .list-names>p {
         padding: .1rem .3rem;
         font-size: .8rem;
     }
 }
 
-@media(min-width: 1300px){
-    .btn-buy-now-top{
-            /* margin-top: 1rem; */
-      width: 390px;
-    height: 60px;
-    padding: .5rem;
-    font-size: 1.4375em;
-    /* background: transparent; */
-    cursor: pointer;
-    transition: .5s ease all;
-}
+@media(min-width: 1300px) {
+    .btn-buy-now-top {
+        /* margin-top: 1rem; */
+        width: 390px;
+        height: 60px;
+        padding: .5rem;
+        font-size: 1.4375em;
+        /* background: transparent; */
+        cursor: pointer;
+        transition: .5s ease all;
     }
+}
+
+@keyframes slieFromTop{
+    0% {
+        transform: translateY(-1000px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
