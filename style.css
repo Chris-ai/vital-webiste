@@ -370,7 +370,7 @@ button {
 .content>h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: var(--whitish-font-color);
     transition: .5s ease all;
     /* margin: 4rem; */
@@ -384,7 +384,7 @@ button {
     color: var(--whitish-font-color);
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 1.4375em;
+    font-size: 1.4375rem;
     background: transparent;
     cursor: pointer;
     transition: .5s ease all;
@@ -487,9 +487,7 @@ button {
     transition: .5s ease all;
 }
 
-
-
-.mobile-menu{
+.mobile-menu {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -501,17 +499,17 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
     /* place-items: center; */
     background: RGBA(196, 196, 196, .8);
-      animation: slieFromTop 1s;
-  -webkit-animation: slieFromTop 1s;
-  -moz-animation: slieFromTop 1s;
-  -o-animation: slieFromTop 1s;
-  -ms-animation: slieFromTop 1s;
-
+    animation: slieFromTop 1s;
+    -webkit-animation: slieFromTop 1s;
+    -moz-animation: slieFromTop 1s;
+    -o-animation: slieFromTop 1s;
+    -ms-animation: slieFromTop 1s;
 }
 
-.mobile-menu > ul {
+.mobile-menu>ul {
     list-style: none;
     text-align: center;
     height: 100%;
@@ -521,7 +519,7 @@ button {
     align-items: center;
 }
 
-.mobile-menu > ul > li {
+.mobile-menu>ul>li {
     font-size: 1.25rem;
     text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
@@ -560,8 +558,6 @@ footer {
     }
 
     .bless-btn {
-        height: 25px;
-        width: 100px;
         padding: 0;
         margin-top: .6rem;
         font-size: .4rem;
@@ -575,17 +571,14 @@ footer {
     }
 
     .content {
-        margin: 1rem;
+        margin: .5rem;
     }
 
     .content>h2 {
-        font-size: .5rem;
+        font-size: 1rem;
     }
 
     .bless-btn {
-        height: 30px;
-        width: 20px;
-        padding: 0;
         font-size: .6rem;
     }
 
@@ -640,7 +633,16 @@ footer {
     }
 }
 
-@media(max-width: 640px) {}
+@media(max-width: 640px) {
+    .content{
+        margin: .2rem;
+    }
+    .bless-btn {
+        padding: 0;
+        font-size: .6rem;
+        border: 1px solid var(--border-gold);
+    }
+}
 
 @media(min-width: 600px) {
     .btn-buy-now-top {
@@ -653,7 +655,7 @@ footer {
 
 @media(max-width: 770px) {
     .content>h2 {
-        font-size: 1rem;
+        font-size: .8rem;
     }
 
 
@@ -662,10 +664,10 @@ footer {
     }
 
     .bless-btn {
-        height: 30px;
-        width: 180px;
+        height: 25px;
+        width: 100px;
         padding: 0;
-        font-size: .6rem;
+        font-size: .4rem;
         border: 3px solid var(--border-gold);
     }
 }
@@ -717,11 +719,7 @@ footer {
     }
 
     .content>h2 {
-        font-size: 1.5rem;
-    }
-
-    .bless-btn {
-        font-size: 1rem;
+        font-size: .8rem;
     }
 
     #logo_big {
@@ -768,7 +766,7 @@ footer {
     }
 }
 
-@keyframes slieFromTop{
+@keyframes slieFromTop {
     0% {
         transform: translateY(-1000px);
     }
