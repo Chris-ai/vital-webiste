@@ -5,19 +5,28 @@
     padding: 0;
     box-sizing: border-box;
 
-    --border-gold: #ECD19E;
+    --gold: #ECD19E;
     --dark-brown: #1e150f;
     --font-color: #000;
     --white-font-color: #fff;
     --whitish-font-color: #f9f6f0;
     --input-background-color: #c4c4c4;
 
-    font-size: 16px;
-    /* border: 1px solid limegreen; */
+    --ff-raleway: 'Raleway', sans-serif;
+    --ff-open-sans: 'Open Sans', sans-serif;
 
+    --fw-extra-bold: 800;
+    --fw-bold: 700;
+    --fw-regular: 500;
+    --fw-medium: 400;
+
+    font-size: 16px;
     transition: .5s ease all;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 nav {
     width: 100%;
@@ -31,23 +40,20 @@ nav {
     width: 22px;
     margin: auto 0;
     display: none;
-    transition: .5s ease all;
     cursor: pointer;
 }
 
 .list {
     display: flex;
     align-items: center;
-    /* display: block; */
-    transition: .5s ease all;
 }
 
 .link {
     margin: 0 30px;
     text-transform: uppercase;
     font-size: 0.875rem;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
+    font-family: var(--ff-raleway);
+    font-weight: var(--fw-bold);
     position: relative;
 }
 
@@ -63,10 +69,6 @@ nav {
 
 .wrapper {
     position: relative;
-    /* display: flex; */
-    /* height: 600px; */
-    /* height: 90vh; */
-    /* max-height: 680px; */
 }
 
 .top-container {
@@ -96,18 +98,14 @@ nav {
     position: absolute;
     top: -4px;
     right: 0;
-    background: var(--border-gold);
+    background: var(--gold);
 }
 
 .info-container {
     width: 100%;
     height: 100%;
-    /* margin: auto 0; */
     display: flex;
     flex-direction: column;
-    /* text-align: center; */
-    /* align-items: center; */
-    /* justify-content: center; */
     overflow: hidden;
 }
 
@@ -126,19 +124,18 @@ nav {
 .vitamins {
     display: inline-block;
     color: var(--font-color);
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--ff-raleway);
     text-align: center;
     font-size: 1.2rem;
     width: auto;
     padding: 1rem 2.5rem;
-    /* border-bottom: 4px solid var(--border-gold); */
 }
 
 .list-names {
     display: flex;
     align-items: center;
     color: var(--font-color);
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--ff-open-sans);
     font-weight: bold;
     font-size: 1.125rem;
     text-transform: uppercase;
@@ -150,7 +147,7 @@ nav {
 
 .list-names::before {
     height: 4px;
-    background-color: var(--border-gold);
+    background-color: var(--gold);
     width: 80%;
     top: -5px;
     content: "";
@@ -163,16 +160,14 @@ nav {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    /* padding: 0 5rem; */
 }
 
 .text-top {
     display: inline-block;
-    /* width: 390px; */
     text-align: left;
     font-size: 1.225rem;
     padding-left: 4rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--ff-open-sans);
 }
 
 button {
@@ -183,8 +178,8 @@ button {
 
 .btn-buy-now-top {
     background: var(--dark-brown);
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
+    font-family: var(--ff-open-sans);
+    font-weight: var(--fw-extra-bold);
     font-size: 1.125rem;
     margin-top: .6rem;
     text-transform: uppercase;
@@ -210,15 +205,15 @@ button {
 
 .about>p {
     font-size: 1.125rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--ff-open-sans);
     color: var(--font-color);
-    font-weight: 500;
+    font-weight: var(--fw-regular);
 }
 
 .headline {
     color: var(--dark-brown);
     font-size: 3.75rem;
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--ff-raleway);
     font-weight: bold;
 }
 
@@ -227,18 +222,16 @@ button {
     margin: 1rem 0;
     width: 100%;
     text-align: center;
-    transition: .5s ease all;
 }
 
 .headline::after {
     position: absolute;
     content: "";
-    /* top: 0; */
     bottom: -10px;
     margin: auto;
     left: 0;
     right: 0;
-    background: var(--border-gold);
+    background: var(--gold);
     height: 4px;
     width: 30%;
 }
@@ -247,7 +240,6 @@ button {
     text-align: center;
     margin: 1.5rem 0;
     width: 70%;
-    transition: .5s ease all;
 }
 
 .cards {
@@ -266,8 +258,8 @@ button {
 
 .step-name {
     background-color: var(--dark-brown);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
+    font-family: var(--ff-raleway);
+    font-weight: var(--fw-extra-bold);
     font-size: 1.1rem;
     text-align: center;
     padding: .5rem;
@@ -275,20 +267,16 @@ button {
 }
 
 .step-about {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
+    font-family: var(--ff-open-sans);
+    font-weight: var(--fw-regular);
     font-size: 1.0625rem;
     color: var(--font-color);
     text-align: center;
-    /* align-items: center; */
     padding: 0 .5rem;
-    /* margin: auto 0;
-     */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* line-height: 24; */
-    border: 2px solid var(--border-gold);
+    border: 2px solid var(--gold);
     border-top: none;
     height: 200px;
 
@@ -299,11 +287,6 @@ button {
     list-style-position: inside;
 }
 
-.step-about>p,
-.step-about>ul>li {
-    transition: .5s ease all;
-}
-
 .comment-card {
     width: 250px;
     height: 400px;
@@ -312,7 +295,6 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: .5s ease all;
 }
 
 .img-container {
@@ -325,8 +307,8 @@ button {
 
 .comment {
     height: 50%;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
+    font-family: var(--ff-open-sans);
+    font-weight: var(--fw-regular);
     padding: 1rem;
     text-align: center;
     font-size: 1.125rem;
@@ -334,13 +316,8 @@ button {
 
 .photo-galery {
     display: grid;
-    /* width: 70%; */
     place-items: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* grid-gap: 5px; */
-    /* grid-template-columns: repeat(6, 1fr); */
-    /* padding: 3rem 6rem; */
-    /* margin: 3rem 6rem; */
 }
 
 .photo-galery>img {
@@ -368,26 +345,23 @@ button {
 }
 
 .content>h2 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
+    font-family: var(--ff-raleway);
+    font-weight: var(--fw-extra-bold);
     font-size: 2.5rem;
     color: var(--whitish-font-color);
-    transition: .5s ease all;
-    /* margin: 4rem; */
 }
 
 .bless-btn {
     margin-top: 1rem;
     padding: .5rem;
-    border: 5px solid var(--border-gold);
-    font-family: 'Open Sans', sans-serif;
+    border: 5px solid var(--gold);
+    font-family: var(--ff-open-sans);
     color: var(--whitish-font-color);
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: var(--fw-extra-bold);
     font-size: 1.4375rem;
     background: transparent;
     cursor: pointer;
-    transition: .5s ease all;
 }
 
 .contact-wrapper {
@@ -401,7 +375,6 @@ button {
 .contact {
     display: flex;
     margin: 6rem 0;
-    /* width: 1000px; */
 }
 
 .img-bottle {
@@ -409,7 +382,6 @@ button {
     justify-content: center;
     background: #F0EDE7;
     align-items: center;
-    transition: .5s ease all;
 }
 
 .contact-content {
@@ -419,50 +391,42 @@ button {
     justify-items: center;
     align-items: center;
     padding: 3.5rem 7rem;
-    transition: .5s ease all;
 }
 
 .contact-content>h3 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
+    font-family: var(--ff-raleway);
+    font-weight: var(--fw-extra-bold);
     color: var(--whitish-font-color);
     font-size: 2.875rem;
     text-transform: uppercase;
-    transition: .5s ease all;
 }
 
 .contact-content>p {
     text-align: left;
     width: 100%;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
+    font-family: var(--ff-open-sans);
+    font-weight: var(--fw-regular);
     color: var(--white-font-color);
     font-size: 1.75rem;
     margin-bottom: 2rem;
-    transition: .5s ease all;
-    /* justify-self: flex-start; */
-
-    /* text-transform: uppercase; */
 }
 
 .contact-content>h3>i {
     text-transform: none;
     font-style: normal;
     font-size: 2.875rem;
-    color: var(--border-gold);
-    transition: .5s ease all;
+    color: var(--gold);
 }
 
 .contact-input {
     width: 100%;
     padding: 1rem;
     border: none;
-    background-color: #c4c4c4;
+    background-color: var(--input-background-color);
     color: var(--font-color);
     font-size: 1.5625rem;
     outline: none;
     margin: .5rem 0;
-    transition: .5s ease all;
 }
 
 .contact-input::placeholder {
@@ -470,21 +434,19 @@ button {
 }
 
 .order-btn {
-    /* height: 50px; */
     width: 100%;
     padding: .5rem;
     border: none;
-    background-color: var(--border-gold);
+    background-color: var(--gold);
     color: var(--font-color);
     font-size: 1.8rem;
     text-transform: uppercase;
     color: var(--dark-brown);
     margin: 4rem 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--ff-raleway);
     text-align: center;
     cursor: pointer;
-    font-weight: 800;
-    transition: .5s ease all;
+    font-weight: var(--fw-extra-bold);
 }
 
 .mobile-menu {
@@ -500,8 +462,7 @@ button {
     justify-content: center;
     align-items: center;
     display: none;
-    /* place-items: center; */
-    background: RGBA(196, 196, 196, .8);
+    background: rgba(196, 196, 196, .8);
     animation: slieFromTop 1s;
     -webkit-animation: slieFromTop 1s;
     -moz-animation: slieFromTop 1s;
@@ -522,19 +483,18 @@ button {
 .mobile-menu>ul>li {
     font-size: 1.25rem;
     text-transform: uppercase;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    color: RGBA(0, 0, 0, .8);
+    font-family: var(--ff-raleway);
+    font-weight: var(--fw-bold);
+    color: rgba(0, 0, 0, .8);
     margin: 1rem;
     cursor: pointer;
-    /* border-bottom: 1px solid var(--border-gold); */
 }
 
 footer {
     background: var(--dark-brown);
     color: var(--white-font-color);
-    font-weight: 400;
-    font-family: 'Raleway', sans-serif;
+    font-weight: var(--fw-medium);
+    font-family: var(--ff-raleway);
     font-size: .875rem;
     padding: 3rem 0;
     text-align: center;
@@ -561,7 +521,7 @@ footer {
         padding: 0;
         margin-top: .6rem;
         font-size: .4rem;
-        border: 1px solid var(--border-gold);
+        border: 1px solid var(--gold);
     }
 }
 
@@ -640,7 +600,7 @@ footer {
     .bless-btn {
         padding: 0;
         font-size: .6rem;
-        border: 1px solid var(--border-gold);
+        border: 1px solid var(--gold);
     }
 }
 
@@ -668,7 +628,7 @@ footer {
         width: 100px;
         padding: 0;
         font-size: .4rem;
-        border: 3px solid var(--border-gold);
+        border: 3px solid var(--gold);
     }
 }
 
@@ -755,14 +715,12 @@ footer {
 
 @media(min-width: 1300px) {
     .btn-buy-now-top {
-        /* margin-top: 1rem; */
         width: 390px;
         height: 60px;
         padding: .5rem;
         font-size: 1.4375em;
-        /* background: transparent; */
         cursor: pointer;
-        transition: .5s ease all;
+
     }
 }
 
